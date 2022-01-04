@@ -244,6 +244,9 @@ function Library:CreateWindow(Config, Parent)
 					Label.Text = Text
 					Label.Size = UDim2.new(1,-10,0,Label.TextBounds.Y)
 				end
+				function LabelInit:Destroy()
+					Label:Destroy()
+				end
 				return LabelInit
 			end
 			function SectionInit:CreateButton(Name, Callback)
